@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bsty.base.dao.UserDao">
+    <resultMap id="getUserDTO" type="com.bsty.base.dto.UserDTO">
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="role_names" property="roleNames"/>
+<!--        <collection property="roles" ofType="com.bsty.icode.bean.Role">-->
+<!--            <id column="role_id" property="id"/>-->
+<!--            <result column="role_name" property="name"/>-->
+<!--            <result column="root_role" property="rootRole"/>-->
+<!--            <result column="role_description" property="description"/>-->
+<!--        </collection>-->
+    </resultMap>
+    <select id="findUserByName" resultType="com.bsty.base.bean.User"></select>
+
+</mapper>
